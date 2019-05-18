@@ -317,6 +317,29 @@ h3.home-description {
     z-index:9999;
 }
 
+.step-number {
+    text-align: left;
+    display:block;
+    padding:0 0px;
+    margin-bottom: 12px;
+    font-size: 1.4em;
+    span {
+        text-align: center;
+        display: inline-block;
+        height:50px;
+        width:50px;
+        border-radius: 26px;
+        border:solid 2px #000;
+        padding-top:5px;
+    }
+}
+.step-details {
+    text-align: left;
+    h5 {
+        font-size:1.1em;
+    }
+}
+
 @media (max-width: 992px) {
     .home-actions {
         .btn {

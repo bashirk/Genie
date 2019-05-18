@@ -459,8 +459,36 @@ h3.home-description {
   z-index: 9999;
 }
 
+/* line 320, ../scss/_global.scss */
+.step-number {
+  text-align: left;
+  display: block;
+  padding: 0 0px;
+  margin-bottom: 12px;
+  font-size: 1.4em;
+}
+/* line 326, ../scss/_global.scss */
+.step-number span {
+  text-align: center;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  border-radius: 26px;
+  border: solid 2px #000;
+  padding-top: 5px;
+}
+
+/* line 336, ../scss/_global.scss */
+.step-details {
+  text-align: left;
+}
+/* line 338, ../scss/_global.scss */
+.step-details h5 {
+  font-size: 1.1em;
+}
+
 @media (max-width: 992px) {
-  /* line 322, ../scss/_global.scss */
+  /* line 345, ../scss/_global.scss */
   .home-actions .btn {
     width: 100%;
     margin-bottom: 10px;
