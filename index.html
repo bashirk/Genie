@@ -18,9 +18,27 @@
 <!-- Plugin CSS / NONE -->
 <!-- Custom styles for ChangeUp -->
 <link href="css/genie-web.css" rel="stylesheet">
+
+<script charset="utf-8"
+      src="https://cdn.ethers.io/scripts/ethers-v4.min.js"
+      type="text/javascript">
+</script>
+
 </head>
+<script src = "js/lamp.js">
+</script>
+<script src = js/token.js>
+</script>
+
+<script>
+initialize(ethers,web3);
+
+</script>
+
 
 <body id="page-top" class="app">
+  <label id="WishesRemaining"></label><br>
+
   <div class="page-bkg"></div>
   <nav class="main-nav">
     <div class="nav-inner">
@@ -42,7 +60,7 @@
       <div class="col-md-12">
         <h1 class="home-header">Creative genius on demand.</h1>
         <div class="home-actions">
-          <a href="#" class="btn btn-primary">Make Wish</a>
+          <a href="wish-menu.html" class="btn btn-primary">Make Wish</a>
           <a href="#" class="btn btn-secondary">Get a Wish Token</a>
         </div>
         <h3 class="home-description"><b>Genie is a wish-fulfillment system</b> that connects you to a distributed network of hand-selected, world-class creatives via Ethereum.</h3>
@@ -93,7 +111,7 @@
           <div class="row">
             <div class="col-md-4">
               <ul>
-                <li><a href="events/rave">Make a Wish</a></li>
+                <li><a href="account.html">Make a Wish</a></li>
               </ul>
             </div>
             <div class="col-md-4">
