@@ -1,0 +1,86 @@
+// Bootstrap overrides for this template
+.bg-primary {
+    background: $theme-primary;
+    background: -webkit-linear-gradient($theme-primary, darken($theme-primary, 5%));
+    background: linear-gradient($theme-primary, darken($theme-primary, 5%));
+}
+
+button, a.btn {
+    border-radius: 2px;
+    outline:none;
+    border:none;
+    &:hover {
+        background-color:#f3c070;
+        color:#000;
+        transform:translateY(-2px);
+    }
+    &:active {
+        transform:translateY(-1px);
+        outline:none;
+    }
+    &::focus {
+        outline:none;
+    }
+}
+a.btn-primary {
+    background-color: #000;
+    color:#fff;
+    &:hover {
+        color:#000;
+        background-color: #f3c070;
+    }
+}
+a.btn-secondary {
+    background-color:#fff;
+    color:#000;
+    font-weight: 400;
+}
+
+.text-primary {
+    color: $theme-primary;
+}
+
+.no-gutter > [class*='col-'] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+
+.nav-tabs {
+    border: none;
+    border-width: 0;
+    font-size:1.3em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    &:hover {
+        border:none;
+    }
+    .nav-item {
+        margin-bottom: 0;
+    }
+}
+
+
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover, .nav-item:hover {
+    border:none;
+    border-color:transparent;
+    box-shadow: none;
+    border-width: 0;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color:#fff;
+    background-color: #000;
+    border:none;
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+
+
+@media (min-width: 1320px) {
+    .container {
+        position: relative;
+        max-width: 1300px;
+    }
+}
