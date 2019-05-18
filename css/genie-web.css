@@ -437,8 +437,30 @@ h3.home-description {
   display: none;
 }
 
+/* line 300, ../scss/_global.scss */
+.headspacer {
+  width: 100%;
+  height: 200px;
+}
+
+/* line 305, ../scss/_global.scss */
+.make-wish-button {
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  font-size: 1.8em;
+  font-weight: 700;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  z-index: 9999;
+}
+
 @media (max-width: 992px) {
-  /* line 303, ../scss/_global.scss */
+  /* line 322, ../scss/_global.scss */
   .home-actions .btn {
     width: 100%;
     margin-bottom: 10px;

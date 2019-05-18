@@ -37,18 +37,62 @@
       </ul>
     </div>
   </nav>
+  <section class="headspacer"></section>
   <section class="app-container">
-    <div class="row container-inner">
-      <div class="col-md-12">
-        <h1 class="home-header">Creative genius on demand.</h1>
-        <div class="home-actions">
-          <a href="#" class="btn btn-primary">Make Wish</a>
-          <a href="#" class="btn btn-secondary">Get a Wish Token</a>
+    <div class="col-md-12">  
+      <div class="work-request">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="sidebar-head">
+              <h2>Logo Design</h2>
+            </div>
+            <div class="sidebar-section">
+              <span>
+                Upload References:
+              </span>
+              <div class="work-references">
+                <div class="uploaded-ref">filename-blah.jpg<span>x</span>
+                </div>
+                <span class="ref-upload">Upload</span>
+                <span class="subtext">Include any relevant existing assets, rough designs, sketches, reference images or screenshots.</span>
+              </div>
+            </div>
+            <div class="sidebar-section">
+              <span>Brand Colors:</span>
+              <div>
+                <input type="color" id="html5colorpicker" onchange="clickColor(0, -1, -1, 5)" value="#ffffff" style="width:50px;height:50px;margin: 6px 0;">
+                <input type="color" id="html5colorpicker" onchange="clickColor(0, -1, -1, 5)" value="#ffffff" style="width:50px;height:50px;">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="work-head">
+              <p class="section-description">A world-class Genie will research your industry and competitors, review any reference material and deliver a production-ready vector file of your new logo.</p>
+            </div>
+            <div class="work-section">
+              <div class="work-field">
+                <label>Brand Name:</label>
+                <input placeholder="Bob's Burgers" type="text" name="input-brandname"/>
+              </div>
+              <div class="work-field">
+                <label>Industry:</label>
+                <input placeholder="Family Restaurant" type="text" name="input-brandname"/>
+              </div>
+              <div class="work-field">
+                <label>Key Competitors:</label>
+                <input placeholder="McDonald's" type="text" name="input-brandname"/>
+              </div>
+              <div class="work-field notes">
+                <label>Notes:</label>
+                <textarea maxlength="300" name="input-brandname"></textarea>
+              </div>
+            </div>
+          </div>
         </div>
-        <h3 class="home-description"><b>Genie is a wish-fulfillment system</b> that connects you to a distributed network of hand-selected, world-class creatives via Ethereum.</h3>
       </div>
     </div>
   </section>
+  <div class="make-wish-button">Make Wish</div>
   <footer class="page-foot">
      <div class="container">
       <div class="row pad">
