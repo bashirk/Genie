@@ -11,63 +11,8 @@ let _web3
 
 //click-listener
 
-const GenieContractAddress = "0x47591d7654b059be2e279cb9fd35253ee745c212";
+const GenieContractAddress = "0x43779aeb7fa65c8f3cee59f16368d891630d8d09";
 const GenieABI = [
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "name",
-				"type": "string"
-			}
-		],
-		"name": "requestWhiteList",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "name",
-		"outputs": [
-			{
-				"name": "",
-				"type": "string"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [
-			{
-				"name": "wisher",
-				"type": "address"
-			},
-			{
-				"name": "payload",
-				"type": "bytes32"
-			},
-			{
-				"name": "signature",
-				"type": "bytes"
-			}
-		],
-		"name": "verifyApproval",
-		"outputs": [
-			{
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"payable": false,
-		"stateMutability": "pure",
-		"type": "function"
-	},
 	{
 		"constant": false,
 		"inputs": [
@@ -92,14 +37,64 @@ const GenieABI = [
 		"type": "function"
 	},
 	{
-		"constant": true,
+		"constant": false,
 		"inputs": [
 			{
-				"name": "",
+				"name": "_genie",
 				"type": "address"
 			}
 		],
-		"name": "wishers",
+		"name": "ApproveGenie",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_wisher",
+				"type": "address"
+			}
+		],
+		"name": "ApproveWisher",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_wishID",
+				"type": "uint256"
+			},
+			{
+				"name": "_claimID",
+				"type": "uint256"
+			}
+		],
+		"name": "ApproveWishFulfillment",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "spender",
+				"type": "address"
+			},
+			{
+				"name": "subtractedValue",
+				"type": "uint256"
+			}
+		],
+		"name": "decreaseAllowance",
 		"outputs": [
 			{
 				"name": "",
@@ -107,7 +102,21 @@ const GenieABI = [
 			}
 		],
 		"payable": false,
-		"stateMutability": "view",
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_genie",
+				"type": "address"
+			}
+		],
+		"name": "DisapproveGenie",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
@@ -129,40 +138,26 @@ const GenieABI = [
 		"type": "function"
 	},
 	{
-		"constant": true,
-		"inputs": [],
-		"name": "totalSupply",
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
 		"constant": false,
 		"inputs": [
 			{
-				"name": "from",
-				"type": "address"
-			},
-			{
-				"name": "to",
-				"type": "address"
-			},
-			{
-				"name": "value",
+				"name": "_wishReward",
 				"type": "uint256"
+			},
+			{
+				"name": "_name",
+				"type": "string"
+			},
+			{
+				"name": "_description",
+				"type": "string"
 			}
 		],
-		"name": "transferFrom",
+		"name": "GenieMakeWish",
 		"outputs": [
 			{
-				"name": "",
-				"type": "bool"
+				"name": "wishID",
+				"type": "uint256"
 			}
 		],
 		"payable": false,
@@ -170,81 +165,28 @@ const GenieABI = [
 		"type": "function"
 	},
 	{
-		"constant": true,
-		"inputs": [
-			{
-				"name": "sender",
-				"type": "address"
-			}
-		],
-		"name": "getNonce",
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "decimals",
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint8"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "_decimals",
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint8"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [
-			{
-				"name": "",
-				"type": "address"
-			}
-		],
-		"name": "genies",
-		"outputs": [
-			{
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
 		"constant": false,
 		"inputs": [
 			{
-				"name": "_genie",
+				"name": "wisher",
 				"type": "address"
+			},
+			{
+				"name": "nonce",
+				"type": "uint256"
+			},
+			{
+				"name": "signature",
+				"type": "bytes"
 			}
 		],
-		"name": "ApproveGenie",
-		"outputs": [],
+		"name": "grantWish",
+		"outputs": [
+			{
+				"name": "success",
+				"type": "bool"
+			}
+		],
 		"payable": false,
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -274,6 +216,33 @@ const GenieABI = [
 	},
 	{
 		"constant": false,
+		"inputs": [
+			{
+				"name": "_wishReward",
+				"type": "uint256"
+			},
+			{
+				"name": "_name",
+				"type": "string"
+			},
+			{
+				"name": "_description",
+				"type": "string"
+			}
+		],
+		"name": "MakeWish",
+		"outputs": [
+			{
+				"name": "wishID",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
 		"inputs": [],
 		"name": "rubLamp",
 		"outputs": [],
@@ -285,16 +254,48 @@ const GenieABI = [
 		"constant": false,
 		"inputs": [
 			{
-				"name": "_wishID",
-				"type": "uint256"
+				"name": "to",
+				"type": "address"
 			},
 			{
-				"name": "_claimID",
+				"name": "value",
 				"type": "uint256"
 			}
 		],
-		"name": "ApproveWishFulfillment",
-		"outputs": [],
+		"name": "transfer",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "from",
+				"type": "address"
+			},
+			{
+				"name": "to",
+				"type": "address"
+			},
+			{
+				"name": "value",
+				"type": "uint256"
+			}
+		],
+		"name": "transferFrom",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
 		"payable": false,
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -335,314 +336,6 @@ const GenieABI = [
 		"outputs": [],
 		"payable": false,
 		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [
-			{
-				"name": "",
-				"type": "address"
-			}
-		],
-		"name": "_balances",
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "wisher",
-				"type": "address"
-			},
-			{
-				"name": "nonce",
-				"type": "uint256"
-			},
-			{
-				"name": "signature",
-				"type": "bytes"
-			}
-		],
-		"name": "grantWish",
-		"outputs": [
-			{
-				"name": "success",
-				"type": "bool"
-			}
-		],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "_genie",
-				"type": "address"
-			}
-		],
-		"name": "DisapproveGenie",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [
-			{
-				"name": "owner",
-				"type": "address"
-			}
-		],
-		"name": "balanceOf",
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [
-			{
-				"name": "wisher",
-				"type": "address"
-			},
-			{
-				"name": "nonce",
-				"type": "uint256"
-			}
-		],
-		"name": "payloadToSign",
-		"outputs": [
-			{
-				"name": "payload",
-				"type": "bytes32"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"name": "wishes",
-		"outputs": [
-			{
-				"name": "wisher",
-				"type": "address"
-			},
-			{
-				"name": "reward",
-				"type": "uint256"
-			},
-			{
-				"name": "name",
-				"type": "string"
-			},
-			{
-				"name": "description",
-				"type": "string"
-			},
-			{
-				"name": "active",
-				"type": "bool"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "owner",
-		"outputs": [
-			{
-				"name": "",
-				"type": "address"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "symbol",
-		"outputs": [
-			{
-				"name": "",
-				"type": "string"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "spender",
-				"type": "address"
-			},
-			{
-				"name": "subtractedValue",
-				"type": "uint256"
-			}
-		],
-		"name": "decreaseAllowance",
-		"outputs": [
-			{
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "to",
-				"type": "address"
-			},
-			{
-				"name": "value",
-				"type": "uint256"
-			}
-		],
-		"name": "transfer",
-		"outputs": [
-			{
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "_symbol",
-		"outputs": [
-			{
-				"name": "",
-				"type": "string"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [
-			{
-				"name": "",
-				"type": "address"
-			}
-		],
-		"name": "_nonces",
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "_wishReward",
-				"type": "uint256"
-			},
-			{
-				"name": "_name",
-				"type": "string"
-			},
-			{
-				"name": "_description",
-				"type": "string"
-			}
-		],
-		"name": "GenieMakeWish",
-		"outputs": [
-			{
-				"name": "wishID",
-				"type": "uint256"
-			}
-		],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "_name",
-		"outputs": [
-			{
-				"name": "",
-				"type": "string"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [
-			{
-				"name": "owner",
-				"type": "address"
-			},
-			{
-				"name": "spender",
-				"type": "address"
-			}
-		],
-		"name": "allowance",
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
 		"type": "function"
 	},
 	{
@@ -687,47 +380,6 @@ const GenieABI = [
 		],
 		"name": "wishForLogo",
 		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "_wisher",
-				"type": "address"
-			}
-		],
-		"name": "ApproveWisher",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "_wishReward",
-				"type": "uint256"
-			},
-			{
-				"name": "_name",
-				"type": "string"
-			},
-			{
-				"name": "_description",
-				"type": "string"
-			}
-		],
-		"name": "MakeWish",
-		"outputs": [
-			{
-				"name": "wishID",
-				"type": "uint256"
-			}
-		],
 		"payable": false,
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -793,6 +445,438 @@ const GenieABI = [
 		],
 		"name": "Approval",
 		"type": "event"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "_balances",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "_decimals",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint8"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "_name",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "_nonces",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "_symbol",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "owner",
+				"type": "address"
+			},
+			{
+				"name": "spender",
+				"type": "address"
+			}
+		],
+		"name": "allowance",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "owner",
+				"type": "address"
+			}
+		],
+		"name": "balanceOf",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "decimals",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint8"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "genies",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "index",
+				"type": "uint256"
+			}
+		],
+		"name": "getGraphic",
+		"outputs": [
+			{
+				"components": [
+					{
+						"name": "Industry",
+						"type": "string"
+					},
+					{
+						"name": "Usage",
+						"type": "string"
+					},
+					{
+						"name": "Dimensions",
+						"type": "string"
+					},
+					{
+						"name": "Notes",
+						"type": "string"
+					},
+					{
+						"name": "imageRef1",
+						"type": "string"
+					},
+					{
+						"name": "imageRef2",
+						"type": "string"
+					}
+				],
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "index",
+				"type": "uint256"
+			}
+		],
+		"name": "getLogo",
+		"outputs": [
+			{
+				"components": [
+					{
+						"name": "BrandName",
+						"type": "string"
+					},
+					{
+						"name": "Industry",
+						"type": "string"
+					},
+					{
+						"name": "Competitors",
+						"type": "string"
+					},
+					{
+						"name": "Notes",
+						"type": "string"
+					},
+					{
+						"name": "imageRef1",
+						"type": "string"
+					},
+					{
+						"name": "imageRef2",
+						"type": "string"
+					},
+					{
+						"name": "color1",
+						"type": "string"
+					},
+					{
+						"name": "color2",
+						"type": "string"
+					}
+				],
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "sender",
+				"type": "address"
+			}
+		],
+		"name": "getNonce",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "name",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "owner",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "wisher",
+				"type": "address"
+			},
+			{
+				"name": "nonce",
+				"type": "uint256"
+			}
+		],
+		"name": "payloadToSign",
+		"outputs": [
+			{
+				"name": "payload",
+				"type": "bytes32"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "symbol",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "totalSupply",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "wisher",
+				"type": "address"
+			},
+			{
+				"name": "payload",
+				"type": "bytes32"
+			},
+			{
+				"name": "signature",
+				"type": "bytes"
+			}
+		],
+		"name": "verifyApproval",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "pure",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "wishers",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "wishes",
+		"outputs": [
+			{
+				"name": "wisher",
+				"type": "address"
+			},
+			{
+				"name": "reward",
+				"type": "uint256"
+			},
+			{
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"name": "description",
+				"type": "string"
+			},
+			{
+				"name": "active",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
 	}
 ]
 let GenieContract;
@@ -885,26 +969,26 @@ async function MakeWish() {
 
 async function wishForLogo() {
 		let reward = 1;
-		let BrandName = document.getElementById("logo_BrandName");
-		let Industry = document.getElementById("logo_Industry");
-		let Competitors = document.getElementById("logo_KeyCompetitors");
-		let Notes = document.getElementById("logo_Notes");
-		let imageRef1 = document.getElementById("logo_WorkRef1");
-		let imageRef2 = document.getElementById("logo_WorkRef2");
-		let color1 = document.getElementById("logo_BrandColor1");
-		let color2 = document.getElementById("logo_BrandColor2");
+		let BrandName = document.getElementById("logo_BrandName").value;
+		let Industry = document.getElementById("logo_Industry").value;
+		let Competitors = document.getElementById("logo_KeyCompetitors").value;
+		let Notes = document.getElementById("logo_Notes").value;
+		let imageRef1 = document.getElementById("logo_WorkRef1").value;
+		let imageRef2 = document.getElementById("logo_WorkRef2").value;
+		let color1 = document.getElementById("logo_BrandColor1").value;
+		let color2 = document.getElementById("logo_BrandColor2").value;
 
 		await GenieContract.wishForLogo(reward,BrandName,Industry,Competitors,Notes,imageRef1,imageRef2,color1,color2);
 }
 
 async function wishForGraphic() {
 		let reward = 1;
-		let Industry = document.getElementById("graphic_Industry");
-		let Usage = document.getElementById("graphic_Usage");
-		let Dimensions = document.getElementById("graphic_Dimensions");
-		let Notes = document.getElementById("graphic_Notes");
-		let imageRef1 = document.getElementById("graphic_WorkRef1");
-		let imageRef2 = document.getElementById("graphic_WorkRef2");
+		let Industry = document.getElementById("graphic_Industry").value;
+		let Usage = document.getElementById("graphic_Usage").value;
+		let Dimensions = document.getElementById("graphic_Dimensions").value;
+		let Notes = document.getElementById("graphic_Notes").value;
+		let imageRef1 = document.getElementById("graphic_WorkRef1").value;
+		let imageRef2 = document.getElementById("graphic_WorkRef2").value;
 
 		await GenieContract.wishForGraphic(reward,Industry,Usage,Dimensions,Notes,imageRef1,imageRef2);
 

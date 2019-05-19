@@ -1,4 +1,5 @@
 pragma solidity ^0.5.0;
+pragma experimental ABIEncoderV2;
 
 import "./Wishes.sol";
 
@@ -43,6 +44,10 @@ contract Genie is Wishes {
 
     mapping(uint => Logo) LogoWishes;
 
+    function getLogo(uint index) public view returns(Logo memory){
+        return LogoWishes[index];
+    }
+
     function wishForLogo (
         uint reward,
         string memory BrandName,
@@ -69,6 +74,10 @@ contract Genie is Wishes {
     }
 
     mapping(uint => Graphic) GraphicWishes;
+
+     function getGraphic(uint index) public view returns(Graphic memory){
+        return GraphicWishes[index];
+    }
 
     function wishForGraphic (
         uint reward,
@@ -193,7 +202,7 @@ contract Genie is Wishes {
     }
 
     function rubLamp() public{
-        require(_nonces[msg.sender]++<=3);
+        require(_nonces[msg.sender]++<=1);
         _balances[msg.sender] += 1;
         emit Transfer(address(0),msg.sender,1);
     }
@@ -210,6 +219,7 @@ contract Genie is Wishes {
     }
 
 
+
         //genie Functions
 
     /*function ApplyForBounty() public{
@@ -217,13 +227,11 @@ contract Genie is Wishes {
     }*/
 
     function fulfillWish(uint _wishID,string memory _submission) public{
+        require(genies[msg.sender]==true);
         require(wishes[_wishID].active == true);
         wishes[_wishID].claims[msg.sender] = _submission;
         wishes[_wishID].claimants.push(msg.sender);
     }
-
-
-
 
 
 }
