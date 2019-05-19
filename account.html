@@ -104,10 +104,94 @@ initAccount();
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
                   <div class="work-head">
-                    <h2>Available Wishes <span class="lbl-counter">1</span></h2>
+                    <h2>Available Work <span class="lbl-counter">1</span></h2>
                     <p class="section-description">Wishes waiting to be completed.</p>
                   </div>
                   <div class="wish-item">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="wish-id">Wish #0004</div>
+                        <div class="wish-wisher">by <b>Example Name</b></div>
+                      </div>
+                      <div class="col-md-8">
+                        <div class="wish-details">
+                          <span><b>Logo Design</b>, <i id="availableWishBrand1">Brand Name</i>, <i id="availableWishIndustry1">Industry</i></span>
+                        </div>
+                        <div class="wish-details">
+                            <b>Key Competitors:</b> <i id="availableWishCompetitors1">Example Company</i>
+                        </div>
+                        <div class="wish-details">
+                          <span><b>Brand Colors:</b></span>
+                          <div class="wish-detail-color" id = "availableWishColor11">#000000</div>
+                          <div class="wish-detail-color" id = "availableWishColor12">#000000</div>
+                        </div>
+                        <div class="wish-details">
+                          <span><b>Reference Material:</b></span>
+                          <a href="#" class="wish-detail-ref" id="availableWishImageRef11">filename.png</a>
+                          <a href="#" class="wish-detail-ref" id="availableWishImageRef12">filename.png</a>
+                        </div>
+                        <div class="wish-details wish-detail-note">
+                          <b>Note:</b> "<i id="availableWishNotes">This is an example of a note left by a wisher to explain the details of their brand wish.</i>"
+                        </div>
+                      </div>
+                    </div>
+                    <div class="wish-item-actions">
+                      <input id="wishSubmission" placeholder="http://" />
+                      <a id="submitWish" class="btn">Submit</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                  <div class="work-head">
+                    <h2>Submitted Work <span class="lbl-counter">1</span></h2>
+                    <p class="section-description">These are your wishes that are awaiting approval.</p>
+                  </div>
+                  <div class="wish-item">
+                    <div class="row">
+                      <div class="complete-work">
+                        <img src="https://imgur.com/SZBTDEj.jpg"/>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="wish-id">Wish #0002</div>
+                        <div class="wish-wisher">by <b>Example Name</b></div>
+                      </div>
+                      <div class="col-md-8">
+                        <div class="wish-details">
+                          <span><b>Graphic Design</b>, <i id="availableWishUsage2">Usage</i>, <i id="availableWishIndustry2">Industry</i></span>
+                        </div>
+                        <div class="wish-details">
+                            <b>Dimensions:</b> <i id="availableWishDimensions2">1200x1600</i>
+                        </div>
+                        <div class="wish-details">
+                          <span><b>Reference Material:</b></span>
+                          <a href="#" class="wish-detail-ref" id="availableWishImageRef12">filename.png</a>
+                        </div>
+                        <div class="wish-details wish-detail-note">
+                          <b>Note:</b> "<i id="availableWishNotes2">This is an example of a note left by a wisher to explain the details of their brand wish.</i>"
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                  <div class="work-head">
+                    <h2>Approved Work <span class="lbl-counter">1</span></h2>
+                    <p class="section-description">These are your wishes that are complete.</p>
+                  </div>
+                  <div class="wish-item">
+                    <div class="row">
+                      <div class="complete-work">
+                        <img src="https://imgur.com/OxnQaaJ.jpg"/>
+                      </div>
+                    </div>
                     <div class="row">
                       <div class="col-md-4">
                         <div class="wish-id">Wish #0001</div>
@@ -135,159 +219,11 @@ initAccount();
                         </div>
                       </div>
                     </div>
-                    <div class="wish-item-actions">
-                      <input id="wishSubmission"/>
-                      <a id="submitWish" class="btn">Submit</a>
-                    </div>
-                  </div>
-                  <div class="wish-item">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <div class="wish-id">Wish #0002</div>
-                        <div class="wish-wisher">by <b>Example Name</b></div>
-                      </div>
-                      <div class="col-md-8">
-                        <div class="wish-details">
-                          <span><b>Graphic Design</b>, <i id="availableWishUsage2">Usage</i>, <i id="availableWishIndustry2">Industry</i></span>
-                        </div>
-                        <div class="wish-details">
-                            <b>Dimensions:</b> <i id="availableWishDimensions2">1200x1600</i>
-                        </div>
-                        <div class="wish-details">
-                          <span><b>Reference Material:</b></span>
-                          <a href="#" class="wish-detail-ref" id="availableWishImageRef12">filename.png</a>
-                        </div>
-                        <div class="wish-details wish-detail-note">
-                          <b>Note:</b> "<i id="availableWishNotes2">This is an example of a note left by a wisher to explain the details of their brand wish.</i>"
-                        </div>
-                      </div>
-                    </div>
-                    <div class="wish-item-actions">
-                      <a class="btn btn-secondary">Deny</a>
-                      <a class="btn">Approve</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-1"></div>
-                <div class="col-md-10">
-                  <div class="work-head">
-                    <h2>Pending Wishes <span class="lbl-counter">0</span></h2>
-                    <p class="section-description">These are your wishes that are awaiting approval.</p>
-                  </div>
-                  <div class="wish-item">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <div class="wish-id">Wish #0002</div>
-                        <div class="wish-wisher">by <b>Example Name</b></div>
-                      </div>
-                      <div class="col-md-8">
-                        <div class="wish-details">
-                          <span><b>Logo Design</b>, <i id="">Brand Name</i>, <i>Industry</i></span>
-                        </div>
-                        <div class="wish-details">
-                            <b>Key Competitors:</b> Example Company
-                        </div>
-                        <div class="wish-details">
-                          <span><b>Brand Colors:</b></span>
-                          <div class="wish-detail-color">#000000</div>
-                          <div class="wish-detail-color">#000000</div>
-                        </div>
-                        <div class="wish-details">
-                          <span><b>Reference Material:</b></span>
-                          <a href="#" class="wish-detail-ref">filename.png</a>
-                          <a href="#" class="wish-detail-ref">filename.png</a>
-                        </div>
-                        <div class="wish-details wish-detail-note">
-                          <b>Note:</b> "<i>This is an example of a note left by a wisher to explain the details of their brand wish.</i>"
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-1"></div>
-                <div class="col-md-10">
-                  <div class="work-head">
-                    <h2>Completed Wishes <span class="lbl-counter">0</span></h2>
-                    <p class="section-description">These are your wishes that are complete.</p>
-                  </div>
-                  <div class="wish-item">
-                    <div class="row">
-                      <div class="complete-work">
-                        <img src="https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"/>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-4">
-                        <div class="wish-id">Wish #0002</div>
-                        <div class="wish-wisher">by <b>Example Name</b></div>
-                      </div>
-                      <div class="col-md-8">
-                        <div class="wish-details">
-                          <span><b>Logo Design</b>, <i>Brand Name</i>, <i>Industry</i></span>
-                        </div>
-                        <div class="wish-details">
-                            <b>Key Competitors:</b> Example Company
-                        </div>
-                        <div class="wish-details">
-                          <span><b>Brand Colors:</b></span>
-                          <div class="wish-detail-color">#000000</div>
-                          <div class="wish-detail-color">#000000</div>
-                        </div>
-                        <div class="wish-details">
-                          <span><b>Reference Material:</b></span>
-                          <a href="#" class="wish-detail-ref">filename.png</a>
-                          <a href="#" class="wish-detail-ref">filename.png</a>
-                        </div>
-                        <div class="wish-details wish-detail-note">
-                          <b>Note:</b> "<i>This is an example of a note left by a wisher to explain the details of their brand wish.</i>"
-                        </div>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-              <div class="row">
-                <div class="col-md-1"></div>
-                <div class="col-md-10">
-                  <div class="work-head">
-                    <h2>Approve Wishes <span class="lbl-counter">3</span></h2>
-                    <p class="section-description">Approve pending wish requests.</p>
-                  </div>
-                  <div class="wish-item">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <div class="wish-id">Wish #0002</div>
-                        <div class="wish-wisher">by <b>Example Name</b></div>
-                      </div>
-                      <div class="col-md-8">
-                        <div class="wish-details">
-                          <span><b>Graphic Design</b>, <i id="availableWishUsage2">Usage</i>, <i id="availableWishIndustry2">Industry</i></span>
-                        </div>
-                        <div class="wish-details">
-                            <b>Dimensions:</b> <i id="availableWishDimensions2">1200x1600</i>
-                        </div>
-                        <div class="wish-details">
-                          <span><b>Reference Material:</b></span>
-                          <a href="#" class="wish-detail-ref" id="availableWishImageRef12">filename.png</a>
-                        </div>
-                        <div class="wish-details wish-detail-note">
-                          <b>Note:</b> "<i id="availableWishNotes2">This is an example of a note left by a wisher to explain the details of their brand wish.</i>"
-                        </div>
-                      </div>
-                    </div>
-                    <div class="wish-item-actions">
-                      <a class="btn btn-secondary">Deny</a>
-                      <a class="btn">Approve</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
               <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
@@ -298,7 +234,7 @@ initAccount();
                   <div class="wish-item">
                     <div class="row">
                       <div class="complete-work">
-                        <img src="https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"/>
+                        <img src="https://imgur.com/SZBTDEj.jpg"/>
                       </div>
                     </div>
                     <div class="row">
@@ -308,17 +244,17 @@ initAccount();
                       </div>
                       <div class="col-md-8">
                         <div class="wish-details">
-                          <span><b>Graphic Design</b>, <i>Usage</i>, <i>Industry</i></span>
+                          <span><b>Graphic Design</b>, <i id="availableWishUsage2">Usage</i>, <i id="availableWishIndustry2">Industry</i></span>
                         </div>
                         <div class="wish-details">
-                            <b>Dimensions:</b> 1200x1600
+                            <b>Dimensions:</b> <i id="availableWishDimensions2">1200x1600</i>
                         </div>
                         <div class="wish-details">
                           <span><b>Reference Material:</b></span>
-                          <a href="#" class="wish-detail-ref">filename.png</a>
+                          <a href="#" class="wish-detail-ref" id="availableWishImageRef12">filename.png</a>
                         </div>
                         <div class="wish-details wish-detail-note">
-                          <b>Note:</b> "<i>This is an example of a note left by a wisher to explain the details of their brand wish.</i>"
+                          <b>Note:</b> "<i id="availableWishNotes2">This is an example of a note left by a wisher to explain the details of their brand wish.</i>"
                         </div>
                       </div>
                     </div>

@@ -487,9 +487,17 @@ ul.wish-menu {
 	}
 }
 
+#wishSubmission {
+	width:420px;
+	padding:10px;
+	border:solid 2px #000;
+	background:transparent;
+	border-radius: 5px;
+}
+
 .work-request, .user-account {
 	.sidebar-head, .work-head {
-		height:100px;
+		height:60px;
 	}
 	text-align: left;
 	padding:20px 5vw;
@@ -548,6 +556,7 @@ ul.wish-menu {
 }
 
 .section-description {
+	display: none;
 	font-size:1em;
 	text-align: left;
 }
@@ -671,12 +680,17 @@ nav .nav-inner ul.nav-list li .lbl-counter.new {display:none;}
 		width:100%;
 		text-align: center;
 		margin-top:20px;
+		border-top:solid 2px #000;
+		padding-top:20px;
 	}
 	.complete-work {
-		img {
-			max-width:100%;
-			margin-bottom: 20px;
-		}
+		width:100%;
+		text-align: center;
+	}
+	img {
+		max-width:100%;
+		margin: 0 auto 20px;
+
 	}
 }
 
