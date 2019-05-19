@@ -28,9 +28,61 @@ contract Genie is Wishes {
         //mapping(address => string) applicants;
         address[] claimants;
         mapping(address => string) claims;
+    }
+
+    struct Logo {
+        string BrandName;
+        string Industry;
+        string Competitors;
+        string Notes;
+        string imageRef1;
+        string imageRef2;
+        string color1;
+        string color2;
+    }
+
+    mapping(uint => Logo) LogoWishes;
+
+    function wishForLogo (
+        uint reward,
+        string memory BrandName,
+        string memory Industry,
+        string memory Competitors,
+        string memory Notes,
+        string memory imageRef1,
+        string memory imageRef2,
+        string memory color1,
+        string memory color2
+        ) public{
+        LogoWishes[numWishes] = Logo(BrandName,Industry,Competitors,Notes,imageRef1,imageRef2,color1,color2);
+        MakeWish(reward,"Logo","create Logo");
 
     }
 
+    struct Graphic{
+        string Industry;
+        string Usage;
+        string Dimensions;
+        string Notes;
+        string imageRef1;
+        string imageRef2;
+    }
+
+    mapping(uint => Graphic) GraphicWishes;
+
+    function wishForGraphic (
+        uint reward,
+        string memory Industry,
+        string memory Usage,
+        string memory Dimensions,
+        string memory Notes,
+        string memory imageRef1,
+        string memory imageRef2
+        ) public{
+        GraphicWishes[numWishes] = Graphic(Industry,Usage,Dimensions,Notes,imageRef1,imageRef2);
+        MakeWish(reward,"Graphic","create Graphic");
+
+    }
 
     mapping (uint256 => Wish) public wishes;
 
