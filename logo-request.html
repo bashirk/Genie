@@ -51,17 +51,16 @@
                 Upload References:
               </span>
               <div class="work-references">
-                <div class="uploaded-ref">filename-blah.jpg<span>x</span>
-                </div>
-                <span class="ref-upload">Upload</span>
-                <span class="subtext">Include any relevant existing assets, rough designs, sketches, reference images or screenshots.</span>
+                <input id="logo_WorkRef1" placeholder="http://" class="uploaded-ref">
+                <input id="logo_WorkRef2" placeholder="http://" class="uploaded-ref">
+                <span class="subtext">Include links to any relevant existing assets, rough designs, sketches, reference images or screenshots. (We recommend hosting them on <a href="http://imgur.com">Imgur</a>)</span>
               </div>
             </div>
             <div class="sidebar-section">
               <span>Brand Colors:</span>
               <div>
-                <input type="color" id="html5colorpicker" onchange="clickColor(0, -1, -1, 5)" value="#ffffff" style="width:50px;height:50px;margin: 6px 0;">
-                <input type="color" id="html5colorpicker" onchange="clickColor(0, -1, -1, 5)" value="#ffffff" style="width:50px;height:50px;">
+                <input id="logo_BrandColor1" type="color" id="html5colorpicker" onchange="clickColor(0, -1, -1, 5)" value="#ffffff" style="width:50px;height:50px;margin: 6px 0;">
+                <input id="logo_BrandColor2" type="color" id="html5colorpicker" onchange="clickColor(0, -1, -1, 5)" value="#ffffff" style="width:50px;height:50px;">
               </div>
             </div>
           </div>
@@ -72,19 +71,19 @@
             <div class="work-section">
               <div class="work-field">
                 <label>Brand Name:</label>
-                <input placeholder="Bob's Burgers" type="text" name="input-brandname"/>
+                <input id="logo_BrandName"  placeholder="Bob's Burgers" type="text" name="input-brandname"/>
               </div>
               <div class="work-field">
                 <label>Industry:</label>
-                <input placeholder="Family Restaurant" type="text" name="input-brandname"/>
+                <input id="logo_Industry" placeholder="Family Restaurant" type="text" name="input-brandname"/>
               </div>
               <div class="work-field">
                 <label>Key Competitors:</label>
-                <input placeholder="McDonald's" type="text" name="input-brandname"/>
+                <input id="logo_KeyCompetitors" placeholder="McDonald's" type="text" name="input-brandname"/>
               </div>
               <div class="work-field notes">
                 <label>Notes:</label>
-                <textarea maxlength="300" name="input-brandname"></textarea>
+                <textarea id="logo_Notes" maxlength="300" name="input-brandname"></textarea>
               </div>
             </div>
           </div>
