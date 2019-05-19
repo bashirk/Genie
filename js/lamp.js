@@ -887,25 +887,24 @@ async function wishForLogo() {
 		let reward = 1;
 		let BrandName = document.getElementById("logo_BrandName");
 		let Industry = document.getElementById("logo_Industry");
-		let Competitors = document.getElementById("logo_Competitors");
+		let Competitors = document.getElementById("logo_KeyCompetitors");
 		let Notes = document.getElementById("logo_Notes");
-		let imageRef1 = document.getElementById("logo_imageRef1");
-		let imageRef2 = document.getElementById("logo_imageRef2");
-		let color1 = document.getElementById("logo_color1");
-		let color2 = document.getElementById("logo_color2");
+		let imageRef1 = document.getElementById("logo_WorkRef1");
+		let imageRef2 = document.getElementById("logo_WorkRef2");
+		let color1 = document.getElementById("logo_BrandColor1");
+		let color2 = document.getElementById("logo_BrandColor2");
 
 		await GenieContract.wishForLogo(reward,BrandName,Industry,Competitors,Notes,imageRef1,imageRef2,color1,color2);
 }
 
 async function wishForGraphic() {
 		let reward = 1;
-
 		let Industry = document.getElementById("graphic_Industry");
 		let Usage = document.getElementById("graphic_Usage");
 		let Dimensions = document.getElementById("graphic_Dimensions");
 		let Notes = document.getElementById("graphic_Notes");
-		let imageRef1 = document.getElementById("graphic_imageRef1");
-		let imageRef2 = document.getElementById("graphic_imageRef2");
+		let imageRef1 = document.getElementById("graphic_WorkRef1");
+		let imageRef2 = document.getElementById("graphic_WorkRef2");
 
 		await GenieContract.wishForGraphic(reward,Industry,Usage,Dimensions,Notes,imageRef1,imageRef2);
 
