@@ -900,7 +900,8 @@ async function initialize(ethers,web3) {
     //     rubLamp();
     //     console.log('clicked')
     // })
-
+		console.log("aaa")
+getWishes();
     overrides = {
       gasLimit:2000000
     }
@@ -911,6 +912,7 @@ async function rubLamp(){
 }
 
 async function getWishes(){
+	console.log("bbb")
 	let balance = await GenieContract.balanceOf(signer._address);
 	balance = parseInt(balance,0);
 
