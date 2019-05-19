@@ -1517,30 +1517,36 @@ ul.wish-menu li.disabled {
 /* line 612, ../scss/_webapp.scss */
 .lbl-counter.new {
   background-color: red;
+  display: none;
 }
 
 /* line 617, ../scss/_webapp.scss */
+nav .nav-inner ul.nav-list li .lbl-counter.new {
+  display: none;
+}
+
+/* line 619, ../scss/_webapp.scss */
 .user-account {
   padding: 20px 5vw;
   border: solid 2px #000;
   border-radius: 20px;
 }
-/* line 621, ../scss/_webapp.scss */
+/* line 623, ../scss/_webapp.scss */
 .user-account .nav-tabs {
   text-align: center;
   margin-bottom: 100px;
 }
-/* line 625, ../scss/_webapp.scss */
+/* line 627, ../scss/_webapp.scss */
 .user-account .nav-tabs .nav-item {
   width: 33.2%;
 }
 
-/* line 630, ../scss/_webapp.scss */
+/* line 632, ../scss/_webapp.scss */
 .user-account {
   border: none;
 }
 
-/* line 634, ../scss/_webapp.scss */
+/* line 636, ../scss/_webapp.scss */
 .wish-item {
   width: 100%;
   padding: 20px;
@@ -1548,16 +1554,16 @@ ul.wish-menu li.disabled {
   border: solid 2px #000;
   margin-bottom: 30px;
 }
-/* line 640, ../scss/_webapp.scss */
+/* line 642, ../scss/_webapp.scss */
 .wish-item .wish-details {
   margin-top: 5px;
 }
-/* line 643, ../scss/_webapp.scss */
+/* line 645, ../scss/_webapp.scss */
 .wish-item .wish-detail-note {
   margin-top: 6px;
   font-size: 0.9em;
 }
-/* line 647, ../scss/_webapp.scss */
+/* line 649, ../scss/_webapp.scss */
 .wish-item .wish-detail-color {
   margin-top: 8px;
   padding: 2px 5px;
@@ -1566,7 +1572,7 @@ ul.wish-menu li.disabled {
   border-radius: 5px;
   font-size: 0.8em;
 }
-/* line 655, ../scss/_webapp.scss */
+/* line 657, ../scss/_webapp.scss */
 .wish-item .wish-detail-ref {
   display: block;
   border: solid 2px #000;
@@ -1576,34 +1582,34 @@ ul.wish-menu li.disabled {
   font-size: 0.8em;
   font-weight: 700;
 }
-/* line 663, ../scss/_webapp.scss */
+/* line 665, ../scss/_webapp.scss */
 .wish-item .wish-detail-ref::after {
   float: right;
   content: "Download";
 }
-/* line 668, ../scss/_webapp.scss */
+/* line 670, ../scss/_webapp.scss */
 .wish-item .wish-item-actions {
   width: 100%;
   text-align: center;
   margin-top: 20px;
 }
-/* line 674, ../scss/_webapp.scss */
+/* line 676, ../scss/_webapp.scss */
 .wish-item .complete-work img {
   max-width: 100%;
   margin-bottom: 20px;
 }
 
-/* line 684, ../scss/_webapp.scss */
+/* line 686, ../scss/_webapp.scss */
 .about header h1 {
   /*font-size:3em;*/
   font-weight: 200;
 }
-/* line 689, ../scss/_webapp.scss */
+/* line 691, ../scss/_webapp.scss */
 .about section.statement .container {
   /*padding-top:0;*/
 }
 
-/* line 695, ../scss/_webapp.scss */
+/* line 697, ../scss/_webapp.scss */
 .events .event-showcase {
   margin-top: 180px;
 }

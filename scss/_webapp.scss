@@ -611,8 +611,10 @@ ul.wish-menu {
     cursor:pointer;
     &.new {
 		background-color:red;
+		display:none;
 	}	
 }
+nav .nav-inner ul.nav-list li .lbl-counter.new {display:none;}
 
 .user-account {
 	padding:20px 5vw;
