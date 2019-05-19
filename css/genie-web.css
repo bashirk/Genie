@@ -368,29 +368,81 @@ a.btn::focus {
 }
 
 /* line 240, ../scss/_global.scss */
+.btn-glow {
+  animation: glow 3s infinite;
+  -webkit-animation: glow 3s infinite;
+  -moz-animation: glow 3s infinite;
+  -o-animation: glow 3s infinite;
+}
+
+@-webkit-keyframes glow {
+  0%, 20%, 50%, 80%, 100% {
+    background-color: #000;
+  }
+  40% {
+    background-color: #d0872c;
+  }
+  60% {
+    background-color: #d0872c;
+  }
+}
+@-moz-keyframes glow {
+  0%, 20%, 50%, 80%, 100% {
+    background-color: #000;
+  }
+  40% {
+    background-color: #d0872c;
+  }
+  60% {
+    background-color: #d0872c;
+  }
+}
+@-o-keyframes glow {
+  0%, 20%, 50%, 80%, 100% {
+    background-color: #000;
+  }
+  40% {
+    background-color: #d0872c;
+  }
+  60% {
+    background-color: #d0872c;
+  }
+}
+@keyframes glow {
+  0%, 20%, 50%, 80%, 100% {
+    background-color: #000;
+  }
+  40% {
+    background-color: #d0872c;
+  }
+  60% {
+    background-color: #d0872c;
+  }
+}
+/* line 270, ../scss/_global.scss */
 li {
   list-style: none;
 }
 
-/* line 244, ../scss/_global.scss */
+/* line 274, ../scss/_global.scss */
 .primary-glow {
   box-shadow: 0 2px 60px 3px rgba(138, 199, 195, 0.15);
 }
-/* line 246, ../scss/_global.scss */
+/* line 276, ../scss/_global.scss */
 .primary-glow:hover {
   box-shadow: 0 2px 60px 2px rgba(138, 199, 195, 0.35);
 }
 
-/* line 251, ../scss/_global.scss */
+/* line 281, ../scss/_global.scss */
 .faint {
   opacity: 0.15;
 }
-/* line 253, ../scss/_global.scss */
+/* line 283, ../scss/_global.scss */
 .faint:hover {
   opacity: 1;
 }
 
-/* line 258, ../scss/_global.scss */
+/* line 288, ../scss/_global.scss */
 .page-bkg {
   position: fixed;
   top: 0;
@@ -405,7 +457,7 @@ li {
   background-repeat: no-repeat;
 }
 
-/* line 271, ../scss/_global.scss */
+/* line 301, ../scss/_global.scss */
 .container {
   margin: 0 auto;
   width: 100%;
@@ -413,37 +465,37 @@ li {
   padding: 0 4vw 150px;
 }
 
-/* line 278, ../scss/_global.scss */
+/* line 308, ../scss/_global.scss */
 .home-header {
   display: inline-block;
   margin-bottom: 30px;
 }
 
-/* line 283, ../scss/_global.scss */
+/* line 313, ../scss/_global.scss */
 .home-actions .btn {
   width: auto;
   font-size: 1.4em;
 }
 
-/* line 288, ../scss/_global.scss */
+/* line 318, ../scss/_global.scss */
 h3.home-description {
   margin-top: 30px;
   max-width: 500px;
   font-size: 1em;
 }
 
-/* line 295, ../scss/_global.scss */
+/* line 325, ../scss/_global.scss */
 .newsletter {
   display: none;
 }
 
-/* line 300, ../scss/_global.scss */
+/* line 330, ../scss/_global.scss */
 .headspacer {
   width: 100%;
   height: 200px;
 }
 
-/* line 305, ../scss/_global.scss */
+/* line 335, ../scss/_global.scss */
 .make-wish-button {
   text-align: center;
   position: fixed;
@@ -457,9 +509,16 @@ h3.home-description {
   color: #fff;
   cursor: pointer;
   z-index: 9999;
+  -webkit-transition: all .35s;
+  -moz-transition: all .35s;
+  transition: all .35s;
+}
+/* line 349, ../scss/_global.scss */
+.make-wish-button:hover {
+  background-color: #d0872c;
 }
 
-/* line 320, ../scss/_global.scss */
+/* line 354, ../scss/_global.scss */
 .step-number {
   text-align: left;
   display: block;
@@ -467,7 +526,7 @@ h3.home-description {
   margin-bottom: 12px;
   font-size: 1.4em;
 }
-/* line 326, ../scss/_global.scss */
+/* line 360, ../scss/_global.scss */
 .step-number span {
   text-align: center;
   display: inline-block;
@@ -478,16 +537,16 @@ h3.home-description {
   padding-top: 5px;
 }
 
-/* line 336, ../scss/_global.scss */
+/* line 370, ../scss/_global.scss */
 .step-details {
   text-align: left;
 }
-/* line 338, ../scss/_global.scss */
+/* line 372, ../scss/_global.scss */
 .step-details h5 {
   font-size: 1.1em;
 }
 
-/* line 343, ../scss/_global.scss */
+/* line 377, ../scss/_global.scss */
 .bounce {
   animation: bounce 3s infinite;
   -webkit-animation: bounce 3s infinite;
@@ -500,10 +559,10 @@ h3.home-description {
     -webkit-transform: translateY(0);
   }
   40% {
-    -webkit-transform: translateY(-4px);
+    -webkit-transform: translateY(5px);
   }
   60% {
-    -webkit-transform: translateY(-2px);
+    -webkit-transform: translateY(2px);
   }
 }
 @-moz-keyframes bounce {
@@ -511,10 +570,10 @@ h3.home-description {
     -moz-transform: translateY(0);
   }
   40% {
-    -moz-transform: translateY(-4px);
+    -moz-transform: translateY(5px);
   }
   60% {
-    -moz-transform: translateY(-2px);
+    -moz-transform: translateY(2px);
   }
 }
 @-o-keyframes bounce {
@@ -522,10 +581,10 @@ h3.home-description {
     -o-transform: translateY(0);
   }
   40% {
-    -o-transform: translateY(-4px);
+    -o-transform: translateY(5px);
   }
   60% {
-    -o-transform: translateY(-2px);
+    -o-transform: translateY(2px);
   }
 }
 @keyframes bounce {
@@ -533,14 +592,14 @@ h3.home-description {
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-4px);
+    transform: translateY(5px);
   }
   60% {
-    transform: translateY(-2px);
+    transform: translateY(2px);
   }
 }
 @media (max-width: 992px) {
-  /* line 376, ../scss/_global.scss */
+  /* line 410, ../scss/_global.scss */
   .home-actions .btn {
     width: 100%;
     margin-bottom: 10px;
@@ -1599,17 +1658,56 @@ nav .nav-inner ul.nav-list li .lbl-counter.new {
   margin-bottom: 20px;
 }
 
-/* line 686, ../scss/_webapp.scss */
+/* line 684, ../scss/_webapp.scss */
+.rub-lamp::before {
+  content: "Rub the Lamp";
+}
+
+/* line 690, ../scss/_webapp.scss */
+.lamp-hero .home-header::before {
+  content: "Get a Wish Token";
+}
+/* line 693, ../scss/_webapp.scss */
+.lamp-hero .home-description {
+  margin-top: 0;
+}
+/* line 696, ../scss/_webapp.scss */
+.lamp-hero .home-description::before {
+  content: "Genie only accepts WISH tokens. In order to claim a WISH token, sign in to MetaMask and rub the lamp! One WISH per person! (Oh, and you'll need Rinkeby Testnet ETH to get your WISH token).";
+}
+/* line 700, ../scss/_webapp.scss */
+.lamp-hero.rubbed .home-header::before {
+  content: "Your WISH is on its way!";
+}
+/* line 703, ../scss/_webapp.scss */
+.lamp-hero.rubbed .home-description::before {
+  content: "Genie's WISH token should only take a few moments to arrive.";
+}
+/* line 706, ../scss/_webapp.scss */
+.lamp-hero.rubbed .rub-lamp {
+  background-color: #000;
+  color: #fff;
+}
+/* line 709, ../scss/_webapp.scss */
+.lamp-hero.rubbed .rub-lamp::before {
+  content: "Make a Wish";
+}
+/* line 713, ../scss/_webapp.scss */
+.lamp-hero.rubbed .rink {
+  display: none;
+}
+
+/* line 719, ../scss/_webapp.scss */
 .about header h1 {
   /*font-size:3em;*/
   font-weight: 200;
 }
-/* line 691, ../scss/_webapp.scss */
+/* line 724, ../scss/_webapp.scss */
 .about section.statement .container {
   /*padding-top:0;*/
 }
 
-/* line 697, ../scss/_webapp.scss */
+/* line 730, ../scss/_webapp.scss */
 .events .event-showcase {
   margin-top: 180px;
 }

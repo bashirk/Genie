@@ -94,6 +94,12 @@ function action() {
    }
 }
 
+
+$(".rub-lamp").click(function(){
+  $(".lamp-hero").addClass("rubbed");
+});
+
+
 var initVal = "";
 $(document).ready(function(){
     $(".nl-submit").attr("disabled", "true");

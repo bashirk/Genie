@@ -680,6 +680,39 @@ nav .nav-inner ul.nav-list li .lbl-counter.new {display:none;}
 	}
 }
 
+.rub-lamp {
+	&::before {
+		content:"Rub the Lamp";
+	}
+}
+
+.lamp-hero {
+	.home-header::before {
+		content: "Get a Wish Token";
+	}
+	.home-description {
+		margin-top:0;
+	}
+	.home-description::before {
+		content:"Genie only accepts WISH tokens. In order to claim a WISH token, sign in to MetaMask and rub the lamp! One WISH per person! (Oh, and you'll need Rinkeby Testnet ETH to get your WISH token)."
+	}
+	&.rubbed {
+		.home-header::before {
+			content: "Your WISH is on its way!";
+		}
+		.home-description::before {
+			content:"Genie's WISH token should only take a few moments to arrive."
+		}
+		.rub-lamp {
+			background-color:#000;
+			color:#fff;
+			&::before {
+				content:"Make a Wish";
+			}
+		}
+		.rink {display:none;}
+	}
+}
 
 .about {
 	header {
