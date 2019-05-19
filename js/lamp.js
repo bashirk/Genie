@@ -11,7 +11,7 @@ let _web3
 
 //click-listener
 
-const GenieContractAddress = "0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a";
+const GenieContractAddress = "0xab48737e304f649eeafb6824ad8a334cdb7360c6";
 const GenieABI =[
 	{
 		"constant": false,
