@@ -19,7 +19,7 @@ contract Genie is Wishes {
 
 // The Bounty Pool of all wishes available to the Genie Contract
     uint256 PoolofWishes = 21*10**8;
-    uint256 numWishes = 0;
+    uint256 public numWishes = 0;
     struct Wish{
         address wisher;
         uint256 reward;
@@ -131,14 +131,12 @@ contract Genie is Wishes {
             return numWishes++;
     }
 
-     function grantWish(
-    address wisher,
-    uint256 nonce,
-    bytes memory signature
+    function metaRubLamp(
+        address wisher,
+        uint256 nonce,
+        bytes memory signature
   ) public returns (bool success) {
-    require(wishers[wisher]==true);
     require(nonce<1);
-
 
     // Verify and increment nonce.
     require(getNonce(wisher) == nonce);
@@ -157,6 +155,40 @@ contract Genie is Wishes {
     emit Granted(wisher);
     return true;
   }
+
+//   function metaMakeWish(uint _wishID) public pure {
+//         require(wishers[wisher]==true);
+//     require(nonce<1);
+
+//     // Verify and increment nonce.
+//     require(getNonce(wisher) == nonce);
+
+//     // Verify signature.
+//     bytes32 payload = payloadToSign(wisher, nonce);
+//     require(verifyApproval(wisher, payload, signature));
+
+//     // Standard approve.
+//     require(wisher != address(0));
+
+//     _balances[wisher]+=1;
+
+//     _nonces[wisher] = _nonces[wisher].add(1);
+
+//     emit Granted(wisher);
+//     return true;
+//      require(_balances[msg.sender]>=_wishReward);
+//             wishes[numWishes] = Wish({
+//                 wisher: msg.sender,
+//                 reward: _wishReward,
+//                 name: _name,
+//                 description:_description,
+//                 active: true,
+//                 claimants:new address[](0)
+//             });
+//             _balances[msg.sender] -= _wishReward;
+//             emit Transfer(msg.sender,address(this),_wishReward);
+//             return numWishes++;
+//   }
 
 
 

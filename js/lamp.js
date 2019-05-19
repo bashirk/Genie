@@ -1092,8 +1092,9 @@ console.log(signer)
 
   let verified = await GenieContract.verifyApproval(signer._address,payloadToSign,flatSig);
 
-  console.log(verified)
-
+if(verified){
+	  console.log("VERIFIED VALID SIGNATURE FOR: Addess: " + signer._address + ", nonce: " + nonce)
+}
 
 
 }
