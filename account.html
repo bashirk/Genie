@@ -45,6 +45,11 @@ async function initAccount(){
 
 }
 initAccount();
+
+async function fulfillWish1() {
+	let submission = document.getElementById("wishSubmission").value;
+	await GenieContract.fulfillWish(1, submission)
+}
 </script>
 
 <script>
@@ -137,7 +142,7 @@ initAccount();
                     </div>
                     <div class="wish-item-actions">
                       <input id="wishSubmission" placeholder="http://" />
-                      <a id="submitWish" class="btn">Submit</a>
+                      <a id="fulfillWish" class="btn" onclick="fulfillWish1()">Fulfill</a>
                     </div>
                   </div>
                 </div>
