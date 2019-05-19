@@ -8,6 +8,49 @@
 <title>My Magic Lamp - Genie</title>
 
 
+<script charset="utf-8"
+      src="https://cdn.ethers.io/scripts/ethers-v4.min.js"
+      type="text/javascript">
+</script>
+
+<script src = "js/lamp.js">
+</script>
+<script src = js/token.js>
+</script>
+
+<script>
+async function initAccount(){
+  await initialize(ethers,web3);
+  document.getElementById("availableWishBrand1").innerHTML = logoData[1].BrandName;
+  document.getElementById("availableWishIndustry1").innerHTML = logoData[1].Industry;
+  document.getElementById("availableWishCompetitors1").innerHTML = logoData[1].Competitors;
+  document.getElementById("availableWishColor11").innerHTML = logoData[1].color1;
+  document.getElementById("availableWishColor12").innerHTML = logoData[1].color2;
+  document.getElementById("availableWishImageRef11").innerHTML = logoData[1].imageRef1;
+  document.getElementById("availableWishImageRef12").innerHTML = logoData[1].imageRef2;
+  document.getElementById("availableWishNotes").innerHTML = logoData[1].Notes;
+
+  document.getElementById("availableWishUsage2").innerHTML = graphicData[2].Usage;
+  document.getElementById("availableWishIndustry2").innerHTML = graphicData[2].Industry;
+  document.getElementById("availableWishDimensions2").innerHTML = graphicData[2].Dimensions;
+  document.getElementById("availableWishImageRef12").innerHTML = graphicData[2].ImageRef1;
+  document.getElementById("availableWishImageRef12").innerHTML = graphicData[2].ImageRef2;
+  document.getElementById("availableWishNotes2").innerHTML = graphicData[2].Notes;
+
+
+
+
+
+
+
+}
+initAccount();
+</script>
+
+<script>
+
+</script>
+
 <!-- Bootstrap core CSS -->
 <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <!-- Custom fonts -->
@@ -72,23 +115,23 @@
                       </div>
                       <div class="col-md-8">
                         <div class="wish-details">
-                          <span><b>Logo Design</b>, <i>Brand Name</i>, <i>Industry</i></span>
+                          <span><b>Logo Design</b>, <i id="availableWishBrand1">Brand Name</i>, <i id="availableWishIndustry1">Industry</i></span>
                         </div>
                         <div class="wish-details">
-                            <b>Key Competitors:</b> Example Company
+                            <b>Key Competitors:</b> <i id="availableWishCompetitors1">Example Company</i>
                         </div>
                         <div class="wish-details">
                           <span><b>Brand Colors:</b></span>
-                          <div class="wish-detail-color">#000000</div>
-                          <div class="wish-detail-color">#000000</div>
+                          <div class="wish-detail-color" id = "availableWishColor11">#000000</div>
+                          <div class="wish-detail-color" id = "availableWishColor12">#000000</div>
                         </div>
                         <div class="wish-details">
                           <span><b>Reference Material:</b></span>
-                          <a href="#" class="wish-detail-ref">filename.png</a>
-                          <a href="#" class="wish-detail-ref">filename.png</a>
+                          <a href="#" class="wish-detail-ref" id="availableWishImageRef11">filename.png</a>
+                          <a href="#" class="wish-detail-ref" id="availableWishImageRef12">filename.png</a>
                         </div>
                         <div class="wish-details wish-detail-note">
-                          <b>Note:</b> "<i>This is an example of a note left by a wisher to explain the details of their brand wish.</i>"
+                          <b>Note:</b> "<i id="availableWishNotes">This is an example of a note left by a wisher to explain the details of their brand wish.</i>"
                         </div>
                       </div>
                     </div>
@@ -114,7 +157,7 @@
                       </div>
                       <div class="col-md-8">
                         <div class="wish-details">
-                          <span><b>Logo Design</b>, <i>Brand Name</i>, <i>Industry</i></span>
+                          <span><b>Logo Design</b>, <i id="">Brand Name</i>, <i>Industry</i></span>
                         </div>
                         <div class="wish-details">
                             <b>Key Competitors:</b> Example Company
@@ -197,17 +240,17 @@
                       </div>
                       <div class="col-md-8">
                         <div class="wish-details">
-                          <span><b>Graphic Design</b>, <i>Usage</i>, <i>Industry</i></span>
+                          <span><b>Graphic Design</b>, <i id="availableWishUsage2">Usage</i>, <i id="availableWishIndustry2">Industry</i></span>
                         </div>
                         <div class="wish-details">
-                            <b>Dimensions:</b> 1200x1600
+                            <b>Dimensions:</b> <i id="availableWishDimensions2">1200x1600</i>
                         </div>
                         <div class="wish-details">
                           <span><b>Reference Material:</b></span>
-                          <a href="#" class="wish-detail-ref">filename.png</a>
+                          <a href="#" class="wish-detail-ref" id="availableWishImageRef12">filename.png</a>
                         </div>
                         <div class="wish-details wish-detail-note">
-                          <b>Note:</b> "<i>This is an example of a note left by a wisher to explain the details of their brand wish.</i>"
+                          <b>Note:</b> "<i id="availableWishNotes2">This is an example of a note left by a wisher to explain the details of their brand wish.</i>"
                         </div>
                       </div>
                     </div>
@@ -332,4 +375,6 @@
   <script src="js/genie-web.js"></script>
   <script type="text/javascript"></script>
 </body>
+
+
 </html>

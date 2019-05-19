@@ -8,10 +8,14 @@ let rubButton;
 let _ethers
 let _web3
 
+let wishData = new Array();
+let logoData = new Array();
+let graphicData = new Array();
+
 
 //click-listener
 
-const GenieContractAddress = "0xab48737e304f649eeafb6824ad8a334cdb7360c6";
+const GenieContractAddress = "0x2fa8ad469f74ad584c6c09996a3aedd99b61233c";
 const GenieABI =[
 	{
 		"constant": false,
@@ -735,6 +739,20 @@ const GenieABI =[
 	{
 		"constant": true,
 		"inputs": [],
+		"name": "numWishes",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
 		"name": "owner",
 		"outputs": [
 			{
@@ -902,6 +920,7 @@ async function initialize(ethers,web3) {
     // })
 		console.log("aaa")
 getWishes();
+await readWishes()
     overrides = {
       gasLimit:2000000
     }
@@ -994,6 +1013,17 @@ async function wishForGraphic() {
 
 }
 
+async function readWishes(){
+	let numWishes = await GenieContract.numWishes();
+	for(i=0;i<numWishes;i++){
+
+			wishData[i]= await GenieContract.wishes(i)
+			logoData[i] = await GenieContract.getLogo(i)
+			graphicData[i] = await GenieContract.getGraphic(i)
+
+	}
+}
+
 async function dispense() {
 	let provider = ethers.getDefaultProvider('rinkeby');
 
@@ -1034,7 +1064,5 @@ async function dispense() {
 	await FaucetContract.dispense(address);
 
 	window.alert("ether sent");
-
-
 
 }
