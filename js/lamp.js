@@ -826,6 +826,15 @@ async function rubLamp(){
 	await GenieContract.rubLamp();
 }
 
+async function getWishes(){
+	let balance = await GenieContract.balanceOf(signer._address);
+	balance = parseInt(balance,0);
+
+	balance = balance + " WISH"
+
+	return balance;
+}
+
 async function rubLampSign() {
 
 	console.log(_ethers)
