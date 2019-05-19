@@ -11,8 +11,22 @@ let _web3
 
 //click-listener
 
-const GenieContractAddress = "0xd34e266b58960e06b3c6f8a127fd29afeb61505e";
+const GenieContractAddress = "0x47591d7654b059be2e279cb9fd35253ee745c212";
 const GenieABI = [
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "name",
+				"type": "string"
+			}
+		],
+		"name": "requestWhiteList",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
 	{
 		"constant": true,
 		"inputs": [],
@@ -809,7 +823,7 @@ async function initialize(ethers,web3) {
 }
 
 async function rubLamp(){
-
+	await GenieContract.rubLamp();
 }
 
 async function rubLampSign() {
