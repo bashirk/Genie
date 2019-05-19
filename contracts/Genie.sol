@@ -137,7 +137,7 @@ contract Genie is Wishes {
     bytes memory signature
   ) public returns (bool success) {
     require(wishers[wisher]==true);
-    require(nonce<=3);
+    require(nonce<1);
 
 
     // Verify and increment nonce.
@@ -202,7 +202,7 @@ contract Genie is Wishes {
     }
 
     function rubLamp() public{
-        require(_nonces[msg.sender]++<=1);
+        require(_nonces[msg.sender]++<1);
         _balances[msg.sender] += 1;
         emit Transfer(address(0),msg.sender,1);
     }
