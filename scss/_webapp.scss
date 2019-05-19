@@ -496,7 +496,7 @@ ul.wish-menu {
 	border:solid 2px #000;
 	border-radius:20px;
 	h2 {
-		font-size:1.4em;
+		font-size:1.8em;
 		font-weight: 600;
 	}
 	.work-field {
@@ -554,6 +554,7 @@ ul.wish-menu {
 .subtext {
 	font-size:0.8em;
 	text-align: left;
+	margin-top:10px;
 }
 
 .sidebar-section {
@@ -565,7 +566,8 @@ ul.wish-menu {
 	padding:2px 1px 2px 5px;
 	border:solid 2px #000;
 	border-radius:8px;
-	max-width:80%;
+	width:90%;
+	background:transparent;
 	span {
 		float:right;
 		display:inline-block;

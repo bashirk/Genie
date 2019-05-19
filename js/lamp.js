@@ -914,9 +914,7 @@ async function getWishes(){
 	let balance = await GenieContract.balanceOf(signer._address);
 	balance = parseInt(balance,0);
 
-	balance = balance + " WISH"
-
-	return balance;
+	document.getElementById("wishId").innerHTML = balance;
 }
 
 async function rubLampSign() {
