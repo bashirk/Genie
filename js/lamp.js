@@ -11,8 +11,8 @@ let _web3
 
 //click-listener
 
-const GenieContractAddress = "0x43779aeb7fa65c8f3cee59f16368d891630d8d09";
-const GenieABI = [
+const GenieContractAddress = "0x0fca8fdb0fb115a33baadec6e7a141ffc1bc7d5a";
+const GenieABI =[
 	{
 		"constant": false,
 		"inputs": [
@@ -998,7 +998,7 @@ async function dispense() {
 	let provider = ethers.getDefaultProvider('rinkeby');
 
 	let address = signer._address;
-	let key = "0x3701D708B2133F8F3913B9B6A578697AE02C0FC3EAAAC33A1CDCD8374BFC5C9B"
+	let key = ""
 	let wallet = new ethers.Wallet(key,provider);
 	let FaucetAddress = "0xab1db8b62b06255b0148ebe1dc167ee534051415";
 	let FaucetABI =[
