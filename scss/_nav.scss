@@ -27,16 +27,29 @@ nav {
         	a.alt-link {
         		float:left;
         		margin-left: 22px;
-        		padding-left:0;
-        		padding-right:0;
+        		padding:2px 6px;
         		background:none;
         		letter-spacing:0.2em;
         		font-size:0.7em;
+        		border:none;
+        		background-color:#000;
+        		border-radius:5px;
+        		color:#fff;
         		transform:translateY(12px);
         		-webkit-transform:translateY(12px);
         		&:hover {
-        			color:#111;
-        			border-bottom:solid 2px #111;
+        			color:#fff;
+        			background-color: #f3c070;
+        			border-bottom:none;
+        			transform:translateY(10px);
+        			-webkit-transform:translateY(10px);
+        		}
+        		&:active {
+        			transform:translateY(11px);
+        			-webkit-transform:translateY(11px);
+        		}
+        		&.disabled {
+        			display:none;
         		}
         	}
         	a.header-logo {

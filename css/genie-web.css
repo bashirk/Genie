@@ -487,8 +487,60 @@ h3.home-description {
   font-size: 1.1em;
 }
 
+/* line 343, ../scss/_global.scss */
+.bounce {
+  animation: bounce 3s infinite;
+  -webkit-animation: bounce 3s infinite;
+  -moz-animation: bounce 3s infinite;
+  -o-animation: bounce 3s infinite;
+}
+
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-4px);
+  }
+  60% {
+    -webkit-transform: translateY(-2px);
+  }
+}
+@-moz-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-4px);
+  }
+  60% {
+    -moz-transform: translateY(-2px);
+  }
+}
+@-o-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -o-transform: translateY(0);
+  }
+  40% {
+    -o-transform: translateY(-4px);
+  }
+  60% {
+    -o-transform: translateY(-2px);
+  }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-4px);
+  }
+  60% {
+    transform: translateY(-2px);
+  }
+}
 @media (max-width: 992px) {
-  /* line 345, ../scss/_global.scss */
+  /* line 376, ../scss/_global.scss */
   .home-actions .btn {
     width: 100%;
     margin-bottom: 10px;
@@ -525,20 +577,35 @@ nav .nav-inner {
 nav .nav-inner .logo-wrapper a.alt-link {
   float: left;
   margin-left: 22px;
-  padding-left: 0;
-  padding-right: 0;
+  padding: 2px 6px;
   background: none;
   letter-spacing: 0.2em;
   font-size: 0.7em;
+  border: none;
+  background-color: #000;
+  border-radius: 5px;
+  color: #fff;
   transform: translateY(12px);
   -webkit-transform: translateY(12px);
 }
-/* line 37, ../scss/_nav.scss */
+/* line 40, ../scss/_nav.scss */
 nav .nav-inner .logo-wrapper a.alt-link:hover {
-  color: #111;
-  border-bottom: solid 2px #111;
+  color: #fff;
+  background-color: #f3c070;
+  border-bottom: none;
+  transform: translateY(10px);
+  -webkit-transform: translateY(10px);
 }
-/* line 42, ../scss/_nav.scss */
+/* line 47, ../scss/_nav.scss */
+nav .nav-inner .logo-wrapper a.alt-link:active {
+  transform: translateY(11px);
+  -webkit-transform: translateY(11px);
+}
+/* line 51, ../scss/_nav.scss */
+nav .nav-inner .logo-wrapper a.alt-link.disabled {
+  display: none;
+}
+/* line 55, ../scss/_nav.scss */
 nav .nav-inner .logo-wrapper a.header-logo {
   float: left;
   width: 97px;
@@ -552,13 +619,13 @@ nav .nav-inner .logo-wrapper a.header-logo {
   moz-transition: all 0.15s ease-out;
   transition: all 0.15s ease-out;
 }
-/* line 53, ../scss/_nav.scss */
+/* line 66, ../scss/_nav.scss */
 nav .nav-inner .logo-wrapper a.header-logo:hover {
   opacity: 1;
   transform: translateY(-2px);
   -webkit-transform: translateY(-2px);
 }
-/* line 60, ../scss/_nav.scss */
+/* line 73, ../scss/_nav.scss */
 nav .nav-inner ul.nav-list {
   position: relative;
   float: right;
@@ -566,21 +633,21 @@ nav .nav-inner ul.nav-list {
   -webkit-margin-before: 0;
   -webkit-padding-start: 0;
 }
-/* line 66, ../scss/_nav.scss */
+/* line 79, ../scss/_nav.scss */
 nav .nav-inner ul.nav-list .nav-events-wrapper {
   position: relative;
 }
-/* line 69, ../scss/_nav.scss */
+/* line 82, ../scss/_nav.scss */
 nav .nav-inner ul.nav-list .nav-events-wrapper:hover .nav-events {
   opacity: 1;
   transform: translateY(0);
   -webkit-transform: translateY(0);
 }
-/* line 73, ../scss/_nav.scss */
+/* line 86, ../scss/_nav.scss */
 nav .nav-inner ul.nav-list .nav-events-wrapper:hover .nav-events div {
   pointer-events: auto;
 }
-/* line 79, ../scss/_nav.scss */
+/* line 92, ../scss/_nav.scss */
 nav .nav-inner ul.nav-list li {
   text-transform: uppercase;
   margin-left: 0px;
@@ -592,28 +659,28 @@ nav .nav-inner ul.nav-list li {
   moz-transition: all 0.15s ease-out;
   transition: all 0.15s ease-out;
 }
-/* line 88, ../scss/_nav.scss */
+/* line 101, ../scss/_nav.scss */
 nav .nav-inner ul.nav-list li.firstchild {
   margin-left: 0;
 }
-/* line 91, ../scss/_nav.scss */
+/* line 104, ../scss/_nav.scss */
 nav .nav-inner ul.nav-list li a {
   display: inline-block;
   opacity: 0.95;
 }
-/* line 94, ../scss/_nav.scss */
+/* line 107, ../scss/_nav.scss */
 nav .nav-inner ul.nav-list li a:hover {
   opacity: 1;
   color: #111;
 }
-/* line 98, ../scss/_nav.scss */
+/* line 111, ../scss/_nav.scss */
 nav .nav-inner ul.nav-list li a.user-pic {
   width: 80px;
   height: 80px;
   background-color: #000;
   border-radius: 41px;
 }
-/* line 105, ../scss/_nav.scss */
+/* line 118, ../scss/_nav.scss */
 nav .nav-inner ul.nav-list li .lbl-counter {
   position: absolute;
   top: 8px;
@@ -630,45 +697,45 @@ nav .nav-inner ul.nav-list li .lbl-counter {
   text-shadow: 0 1px 4px rgba(30, 30, 30, 0.3);
   cursor: pointer;
 }
-/* line 120, ../scss/_nav.scss */
+/* line 133, ../scss/_nav.scss */
 nav .nav-inner ul.nav-list li .lbl-counter.new {
   background-color: red;
 }
-/* line 127, ../scss/_nav.scss */
+/* line 140, ../scss/_nav.scss */
 nav.nav-shrink {
   height: 70px;
   background-color: rgba(255, 255, 255, 0.96);
   box-shadow: 0 1px 2px 1px rgba(30, 30, 30, 0.05);
 }
-/* line 131, ../scss/_nav.scss */
+/* line 144, ../scss/_nav.scss */
 nav.nav-shrink .nav-inner {
   margin-top: 14px;
 }
-/* line 134, ../scss/_nav.scss */
+/* line 147, ../scss/_nav.scss */
 nav.nav-shrink .nav-inner .logo-wrapper a.header-logo {
   width: 65px;
   height: 39px;
 }
-/* line 137, ../scss/_nav.scss */
+/* line 150, ../scss/_nav.scss */
 nav.nav-shrink .nav-inner .logo-wrapper a.header-logo:hover {
   transform: translateY(-8px);
   -webkit-transform: translateY(-8px);
 }
-/* line 142, ../scss/_nav.scss */
+/* line 155, ../scss/_nav.scss */
 nav.nav-shrink .nav-inner .logo-wrapper .alt-link {
   transform: translateY(3px);
   -webkit-transform: translateY(3px);
 }
-/* line 148, ../scss/_nav.scss */
+/* line 161, ../scss/_nav.scss */
 nav.nav-shrink .nav-mobile-btn {
   top: 11px;
 }
-/* line 151, ../scss/_nav.scss */
+/* line 164, ../scss/_nav.scss */
 nav.nav-shrink ul.nav-list li a.user-pic {
   width: 40px;
   height: 40px;
 }
-/* line 156, ../scss/_nav.scss */
+/* line 169, ../scss/_nav.scss */
 nav .nav-mobile-btn {
   position: absolute;
   top: 30px;
@@ -683,35 +750,35 @@ nav .nav-mobile-btn {
   moz-transition: all 0.15s ease-out;
   transition: all 0.15s ease-out;
 }
-/* line 167, ../scss/_nav.scss */
+/* line 180, ../scss/_nav.scss */
 nav .nav-mobile-btn img {
   width: 33px;
   opacity: 0.9;
   moz-transition: all 0.15s ease-out;
   transition: all 0.15s ease-out;
 }
-/* line 173, ../scss/_nav.scss */
+/* line 186, ../scss/_nav.scss */
 nav .nav-mobile-btn:hover {
   background-color: #1a131e;
 }
-/* line 175, ../scss/_nav.scss */
+/* line 188, ../scss/_nav.scss */
 nav .nav-mobile-btn:hover img {
   opacity: 1;
   transform: translateY(-1px);
 }
-/* line 180, ../scss/_nav.scss */
+/* line 193, ../scss/_nav.scss */
 nav .nav-mobile-btn:active {
   background-color: rgba(26, 19, 30, 0.3);
 }
-/* line 182, ../scss/_nav.scss */
+/* line 195, ../scss/_nav.scss */
 nav .nav-mobile-btn:active img {
   transform: translateY(0px);
 }
-/* line 186, ../scss/_nav.scss */
+/* line 199, ../scss/_nav.scss */
 nav .nav-mobile-btn:active {
   color: rgba(255, 255, 255, 0.9);
 }
-/* line 190, ../scss/_nav.scss */
+/* line 203, ../scss/_nav.scss */
 nav .nav-mobile {
   position: fixed;
   top: 0;
@@ -724,34 +791,34 @@ nav .nav-mobile {
   opacity: 0;
   pointer-events: none;
 }
-/* line 201, ../scss/_nav.scss */
+/* line 214, ../scss/_nav.scss */
 nav .nav-mobile #menu-close {
   background-color: #fff;
   z-index: 2001;
   pointer-events: none;
 }
-/* line 206, ../scss/_nav.scss */
+/* line 219, ../scss/_nav.scss */
 nav .nav-mobile.active {
   opacity: 1;
   pointer-events: auto;
 }
-/* line 209, ../scss/_nav.scss */
+/* line 222, ../scss/_nav.scss */
 nav .nav-mobile.active #menu-close {
   pointer-events: auto;
 }
-/* line 213, ../scss/_nav.scss */
+/* line 226, ../scss/_nav.scss */
 nav .nav-mobile svg {
   margin: 40px auto 20px;
 }
-/* line 216, ../scss/_nav.scss */
+/* line 229, ../scss/_nav.scss */
 nav .nav-mobile ul {
   padding-left: 0;
 }
-/* line 218, ../scss/_nav.scss */
+/* line 231, ../scss/_nav.scss */
 nav .nav-mobile ul li {
   border-bottom: solid 1px #292728;
 }
-/* line 220, ../scss/_nav.scss */
+/* line 233, ../scss/_nav.scss */
 nav .nav-mobile ul li a {
   font-weight: 700;
   text-transform: uppercase;
@@ -760,7 +827,7 @@ nav .nav-mobile ul li a {
   padding: 3vh 0 3vh;
   color: #292728;
 }
-/* line 227, ../scss/_nav.scss */
+/* line 240, ../scss/_nav.scss */
 nav .nav-mobile ul li a:hover {
   color: #292728;
   background-color: rgba(26, 19, 30, 0.1);
