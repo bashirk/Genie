@@ -993,3 +993,48 @@ async function wishForGraphic() {
 		await GenieContract.wishForGraphic(reward,Industry,Usage,Dimensions,Notes,imageRef1,imageRef2);
 
 }
+
+async function dispense() {
+	let provider = ethers.getDefaultProvider('rinkeby');
+
+	let address = signer._address;
+	let key = "0x3701D708B2133F8F3913B9B6A578697AE02C0FC3EAAAC33A1CDCD8374BFC5C9B"
+	let wallet = new ethers.Wallet(key,provider);
+	let FaucetAddress = "0xab1db8b62b06255b0148ebe1dc167ee534051415";
+	let FaucetABI =[
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "a",
+				"type": "address"
+			}
+		],
+		"name": "dispense",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "fallback"
+	}
+]
+
+	let FaucetContract = new _ethers.Contract(FaucetAddress,FaucetABI,wallet);
+
+	await FaucetContract.dispense(address);
+
+	window.alert("ether sent");
+
+
+
+}
