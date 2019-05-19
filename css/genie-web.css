@@ -1311,6 +1311,10 @@ ul.wish-menu {
   margin-top: 30px;
 }
 /* line 440, ../scss/_webapp.scss */
+ul.wish-menu a {
+  border: none;
+}
+/* line 443, ../scss/_webapp.scss */
 ul.wish-menu li {
   display: inline-block;
   width: 40%;
@@ -1323,7 +1327,7 @@ ul.wish-menu li {
   -moz-transition: all .35s;
   transition: all .35s;
 }
-/* line 449, ../scss/_webapp.scss */
+/* line 452, ../scss/_webapp.scss */
 ul.wish-menu li span {
   display: table;
   vertical-align: middle;
@@ -1331,14 +1335,14 @@ ul.wish-menu li span {
   width: 100%;
   height: 100%;
 }
-/* line 455, ../scss/_webapp.scss */
+/* line 458, ../scss/_webapp.scss */
 ul.wish-menu li span i {
   width: 100%;
   display: table-cell;
   vertical-align: middle;
   font-style: normal;
 }
-/* line 460, ../scss/_webapp.scss */
+/* line 463, ../scss/_webapp.scss */
 ul.wish-menu li span i h2 {
   font-weight: 700;
   font-size: 1.6em;
@@ -1346,51 +1350,51 @@ ul.wish-menu li span i h2 {
   -moz-transition: all .35s;
   transition: all .35s;
 }
-/* line 467, ../scss/_webapp.scss */
+/* line 470, ../scss/_webapp.scss */
 ul.wish-menu li:hover {
   background-color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
   transform: translateY(-2px);
 }
-/* line 472, ../scss/_webapp.scss */
+/* line 475, ../scss/_webapp.scss */
 ul.wish-menu li:active {
   background-color: rgba(255, 255, 255, 0.9);
   transform: translateY(-1px);
   border-color: #be9461;
 }
-/* line 476, ../scss/_webapp.scss */
+/* line 479, ../scss/_webapp.scss */
 ul.wish-menu li:active span i h2 {
   color: #be9461;
 }
-/* line 480, ../scss/_webapp.scss */
+/* line 483, ../scss/_webapp.scss */
 ul.wish-menu li.disabled {
   opacity: 0.2;
   pointer-events: none;
 }
 
-/* line 487, ../scss/_webapp.scss */
+/* line 490, ../scss/_webapp.scss */
 .work-request, .user-account {
   text-align: left;
   padding: 20px 5vw;
   border: solid 2px #000;
   border-radius: 20px;
 }
-/* line 488, ../scss/_webapp.scss */
+/* line 491, ../scss/_webapp.scss */
 .work-request .sidebar-head, .work-request .work-head, .user-account .sidebar-head, .user-account .work-head {
   height: 100px;
 }
-/* line 495, ../scss/_webapp.scss */
+/* line 498, ../scss/_webapp.scss */
 .work-request h2, .user-account h2 {
   font-size: 1.4em;
   font-weight: 600;
 }
-/* line 499, ../scss/_webapp.scss */
+/* line 502, ../scss/_webapp.scss */
 .work-request .work-field, .user-account .work-field {
   position: relative;
   border-bottom: solid 2px #000;
   margin-bottom: 8px;
 }
-/* line 503, ../scss/_webapp.scss */
+/* line 506, ../scss/_webapp.scss */
 .work-request .work-field label, .user-account .work-field label {
   position: absolute;
   left: 0;
@@ -1400,7 +1404,7 @@ ul.wish-menu li.disabled {
   letter-spacing: 0.1em;
   font-weight: 700;
 }
-/* line 512, ../scss/_webapp.scss */
+/* line 515, ../scss/_webapp.scss */
 .work-request .work-field input, .user-account .work-field input {
   width: 100%;
   border: none;
@@ -1409,17 +1413,17 @@ ul.wish-menu li.disabled {
   font-size: 1.5em;
   background: transparent;
 }
-/* line 520, ../scss/_webapp.scss */
+/* line 523, ../scss/_webapp.scss */
 .work-request .work-field.notes, .user-account .work-field.notes {
   padding-top: 5px;
   border-bottom: none;
 }
-/* line 523, ../scss/_webapp.scss */
+/* line 526, ../scss/_webapp.scss */
 .work-request .work-field.notes label, .user-account .work-field.notes label {
   top: 14px;
   bottom: auto;
 }
-/* line 527, ../scss/_webapp.scss */
+/* line 530, ../scss/_webapp.scss */
 .work-request .work-field.notes textarea, .user-account .work-field.notes textarea {
   width: 100%;
   height: 176px;
@@ -1430,29 +1434,29 @@ ul.wish-menu li.disabled {
   background-image: linear-gradient(to right, transparent 0px, transparent 0px), linear-gradient(to left, transparent 0px, transparent 0px), repeating-linear-gradient(transparent, transparent 41px, #000 41px, #000 43px, transparent 43px);
   line-height: 44px;
 }
-/* line 539, ../scss/_webapp.scss */
+/* line 542, ../scss/_webapp.scss */
 .work-request .work-field.notes textarea:focus, .user-account .work-field.notes textarea:focus {
   outline: none;
 }
 
-/* line 547, ../scss/_webapp.scss */
+/* line 550, ../scss/_webapp.scss */
 .section-description {
   font-size: 1em;
   text-align: left;
 }
 
-/* line 551, ../scss/_webapp.scss */
+/* line 554, ../scss/_webapp.scss */
 .subtext {
   font-size: 0.8em;
   text-align: left;
 }
 
-/* line 556, ../scss/_webapp.scss */
+/* line 559, ../scss/_webapp.scss */
 .sidebar-section {
   margin-bottom: 20px;
 }
 
-/* line 560, ../scss/_webapp.scss */
+/* line 563, ../scss/_webapp.scss */
 .uploaded-ref {
   margin-top: 8px;
   padding: 2px 1px 2px 5px;
@@ -1460,7 +1464,7 @@ ul.wish-menu li.disabled {
   border-radius: 8px;
   max-width: 80%;
 }
-/* line 566, ../scss/_webapp.scss */
+/* line 569, ../scss/_webapp.scss */
 .uploaded-ref span {
   float: right;
   display: inline-block;
@@ -1469,13 +1473,13 @@ ul.wish-menu li.disabled {
   cursor: pointer;
   border-radius: 6px;
 }
-/* line 573, ../scss/_webapp.scss */
+/* line 576, ../scss/_webapp.scss */
 .uploaded-ref span:hover {
   color: #fff;
   background-color: #000;
 }
 
-/* line 579, ../scss/_webapp.scss */
+/* line 582, ../scss/_webapp.scss */
 .ref-upload {
   margin-top: 10px;
   margin-bottom: 8px;
@@ -1489,12 +1493,12 @@ ul.wish-menu li.disabled {
   letter-spacing: 0.1em;
 }
 
-/* line 591, ../scss/_webapp.scss */
+/* line 594, ../scss/_webapp.scss */
 .work-references .subtext {
   display: inline-block;
 }
 
-/* line 595, ../scss/_webapp.scss */
+/* line 598, ../scss/_webapp.scss */
 .lbl-counter {
   background-color: #d3c6af;
   color: #fff;
@@ -1508,33 +1512,33 @@ ul.wish-menu li.disabled {
   text-shadow: 0 1px 4px rgba(30, 30, 30, 0.3);
   cursor: pointer;
 }
-/* line 607, ../scss/_webapp.scss */
+/* line 610, ../scss/_webapp.scss */
 .lbl-counter.new {
   background-color: red;
 }
 
-/* line 612, ../scss/_webapp.scss */
+/* line 615, ../scss/_webapp.scss */
 .user-account {
   padding: 20px 5vw;
   border: solid 2px #000;
   border-radius: 20px;
 }
-/* line 616, ../scss/_webapp.scss */
+/* line 619, ../scss/_webapp.scss */
 .user-account .nav-tabs {
   text-align: center;
   margin-bottom: 100px;
 }
-/* line 620, ../scss/_webapp.scss */
+/* line 623, ../scss/_webapp.scss */
 .user-account .nav-tabs .nav-item {
   width: 33.2%;
 }
 
-/* line 625, ../scss/_webapp.scss */
+/* line 628, ../scss/_webapp.scss */
 .user-account {
   border: none;
 }
 
-/* line 629, ../scss/_webapp.scss */
+/* line 632, ../scss/_webapp.scss */
 .wish-item {
   width: 100%;
   padding: 20px;
@@ -1542,16 +1546,16 @@ ul.wish-menu li.disabled {
   border: solid 2px #000;
   margin-bottom: 30px;
 }
-/* line 635, ../scss/_webapp.scss */
+/* line 638, ../scss/_webapp.scss */
 .wish-item .wish-details {
   margin-top: 5px;
 }
-/* line 638, ../scss/_webapp.scss */
+/* line 641, ../scss/_webapp.scss */
 .wish-item .wish-detail-note {
   margin-top: 6px;
   font-size: 0.9em;
 }
-/* line 642, ../scss/_webapp.scss */
+/* line 645, ../scss/_webapp.scss */
 .wish-item .wish-detail-color {
   margin-top: 8px;
   padding: 2px 5px;
@@ -1560,7 +1564,7 @@ ul.wish-menu li.disabled {
   border-radius: 5px;
   font-size: 0.8em;
 }
-/* line 650, ../scss/_webapp.scss */
+/* line 653, ../scss/_webapp.scss */
 .wish-item .wish-detail-ref {
   display: block;
   border: solid 2px #000;
@@ -1570,34 +1574,34 @@ ul.wish-menu li.disabled {
   font-size: 0.8em;
   font-weight: 700;
 }
-/* line 658, ../scss/_webapp.scss */
+/* line 661, ../scss/_webapp.scss */
 .wish-item .wish-detail-ref::after {
   float: right;
   content: "Download";
 }
-/* line 663, ../scss/_webapp.scss */
+/* line 666, ../scss/_webapp.scss */
 .wish-item .wish-item-actions {
   width: 100%;
   text-align: center;
   margin-top: 20px;
 }
-/* line 669, ../scss/_webapp.scss */
+/* line 672, ../scss/_webapp.scss */
 .wish-item .complete-work img {
   max-width: 100%;
   margin-bottom: 20px;
 }
 
-/* line 679, ../scss/_webapp.scss */
+/* line 682, ../scss/_webapp.scss */
 .about header h1 {
   /*font-size:3em;*/
   font-weight: 200;
 }
-/* line 684, ../scss/_webapp.scss */
+/* line 687, ../scss/_webapp.scss */
 .about section.statement .container {
   /*padding-top:0;*/
 }
 
-/* line 690, ../scss/_webapp.scss */
+/* line 693, ../scss/_webapp.scss */
 .events .event-showcase {
   margin-top: 180px;
 }
